@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DL26 Injector</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>⚽ DL26 Injector</h1>
+  </header>
+
+  <div class="menu">
+    <button class="menu-btn" data-section="inicio">Inicio</button>
+    <button class="menu-btn" data-section="mods">Mods</button>
+    <button class="menu-btn" data-section="ajustes">Ajustes</button>
+  </div>
+
+  <main id="app">
+    <section id="inicio" class="section active">
+      <h2>Injector DL26</h2>
+      <p>Conecta el juego y selecciona mods.</p>
+      <button id="connect-btn" class="action-btn">Conectar Juego</button>
+      <div id="game-status">Juego: <span id="status-text">Desconectado</span></div>
+    </section>
+
+    <section id="mods" class="section">
+      <h2>Mods Disponibles</h2>
+      <div class="mod-list">
+        <button class="mod-btn" data-mod="infmoney">💰 Dinero Infinito</button>
+        <button class="mod-btn" data-mod="unlockall">🔓 Desbloquear Todo</button>
+        <button class="mod-btn" data-mod="godmode">🛡️ Modo Dios</button>
+        <button class="mod-btn" data-mod="speed">⚡ Velocidad x2</button>
+        <button class="mod-btn" data-mod="stamina">💪 Resistencia Infinita</button>
+        <button class="mod-btn" data-mod="skill">⭐ Habilidades Max</button>
+      </div>
+    </section>
+
+    <section id="ajustes" class="section">
+      <h2>Ajustes</h2>
+      <div class="toggle-container">
+        <label class="toggle-switch">
+          <input type="checkbox" id="auto-inject">
+          <span class="slider"></span>
+        </label>
+        <span>Inyección Automática</span>
+      </div>
+    </section>
+  </main>
+
+  <div id="notification" class="hidden"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
